@@ -3,69 +3,73 @@ before = document.querySelector('.before');
 after = document.querySelector('.after');
 play = document.querySelector('.play');
 pause = document.querySelector('.pause');
+// console.log(imgs);
+var nodar = [];
 
 before.addEventListener('click', movingLeft);
 after.addEventListener('click', movingRight);
 play.addEventListener('click', playSlider);
 pause.addEventListener('click', pauseSlider);
-
 positioning();
 
+// console.log(imgs)
 
 function positioning() {
     for (i = 0; i < imgs.length; i++) {
         let im = imgs[i];
-        im.classList.add('img' + i);                //adding Classes
+        im.classList.add('img' + i); //adding Classes
         var position = imgs.length * (-600) + 1200;
-        im.style.left = position + 600 * i + "px";  //adding  Position
-        // imgs[imgs.length].removeAttribute("class", "img" + imgs.length)
-        var current = im.getAttribute("class");
-        console.log(current)
-        console.log(im)
-        
-        playy(im, i, position);                     //sending Element, Index and position
+        im.style.left = position + 600 * i+"px"; //adding  Position  
+
+        var lefty = im.style.left
+           
+            
+      
+        console.log(lefty);
+
+        //                    //sending Element, Index and position
+        playy(im, i, lefty);
+        // console.log(im, i, lefty);
     };
+    // nodar.unshift(imgs.length-1);
 }
 
-function changingClass () {
-}
+var x;
+
+function changingClass() {}
 
 // function movingRight(im, i, position){
 // }
 
-function playy(im, i, position) {
+function playy(im, i, lefty) {
 
-    console.log(im)
+    // console.log(lefty)
+    let hefty = parseInt(lefty);
+
     setInterval(function() {
-        im.style.left = position + 600 * i + 600 + "px"; // moving right for one position
-        // let last = im.getAttributeNode("style").value    //getting values from Attribute Style
-        // if (im.style.left == 1200 + "px") {
-        //     console.log(position)
-        //     im.style.left = imgs.length * (-600) + 1200 + "px";
-        //     position = imgs.length * (-600) + 1200;
-        //     return (im, i, position+=600);
-        // }
-            position += 600;                              //all elements have good position
-        // return (im, i, position);
-        // console.log(last)
-        // // last.style.left = "-600px";
-        //  if (last == "600px"){
-        //      last = "-600px";
-        //      console.log(im);
-             // alert('ujaa');
-        //  }
-        // im.style.left = "600px";
-        //         // console.log(i)
-        //         // positioning();
-        // // function toTheRight(imgs, i){ //Right Arrow Function
-        //     // imgs[i].style.left = position +600*i+600+"px";
+        hefty+=600;
+        var integy = hefty + "px"
+         if (hefty == 1200) {
+            hefty=  -2400 ;
+            }
+            console.log(integy);
+        im.style.left = integy
+        
+            console.log(im, lefty);
+ 
+
+  //       im.style.left = parseInt(lefty) + 600  + "px"; // moving right for one position
+  //       }
+
+
+        integy += 600; //all elements have good position
+console.log(lefty);
+// console.log(position);
+        // return;
+
     }, 4000);
 }
-clearInterval();
-// playy(im, i, position);
-// document.getElementsByTagName('body')[0].onload= function(){
-//     playSlider();
-
+playSlider();
 
 
 
@@ -79,10 +83,10 @@ function roto() {
 
 function playSlider() {
     // console.log(imgs);
-    toTheRight();
-    // $('.pause').prop("disabled", false);
-    // $('.play').prop("disabled", true);
-    myInterval = setInterval(toTheRight, 3500);
+    // toTheRight();
+    // // $('.pause').prop("disabled", false);
+    // // $('.play').prop("disabled", true);
+    // myInterval = setInterval(toTheRight, 3500);
 }
 
 
@@ -93,18 +97,18 @@ function playSlider() {
 
 
 
-let aftr = function() {
-    after.click(function() {
-        movingRight()
-    })
-}
+// let aftr = function() {
+//     after.click(function() {
+//         movingRight()
+//     })
+// }
 
 
-let bfr = function() {
-    before.click(function() {
-        movingLeft()
-    })
-};
+// let bfr = function() {
+//     before.click(function() {
+//         movingLeft()
+//     })
+// };
 
 
 
@@ -161,3 +165,21 @@ function toTheLeft() {
     //     $('.img2').removeClass('img2').addClass('img0');
     //     $('.imga3').removeClass('imga3').addClass('img2');
 }
+
+
+
+// function positioning() {
+//     for (i = 0; i < imgs.length; i++) {
+//         let im = imgs[i];
+//         im.classList.add('img' + i);                //adding Classes
+//         var position = imgs.length * (-600) + 1200;
+//         im.style.left = position + 600 * i + "px";  //adding  Position
+//         // imgs[imgs.length].removeAttribute("class", "img" + imgs.length)
+//         var current = im.getAttribute("class");
+
+
+//         playy(im, i, position);  
+//         piccar.push(im)
+//                            //sending Element, Index and position
+//     };
+// }
