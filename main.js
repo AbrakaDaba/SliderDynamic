@@ -46,7 +46,7 @@ function playy(im, i, lefty) {
     // console.log(lefty)
     let hefty = parseInt(lefty);
 
-etInterval(function() {
+setInterval(function() {
         hefty+=600;
         var integy = hefty + "px"
          if (hefty == 1200) {
