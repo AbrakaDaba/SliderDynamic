@@ -46,11 +46,14 @@ function playy(im, i, lefty) {
     // console.log(lefty)
     let hefty = parseInt(lefty);
 
-    setInterval(function() {
+etInterval(function() {
         hefty+=600;
         var integy = hefty + "px"
          if (hefty == 1200) {
             hefty=  -2400 ;
+            im.style.display= "none";
+            }else{
+                im.style.display = "block";
             }
             console.log(integy);
         im.style.left = integy
