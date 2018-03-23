@@ -4,12 +4,12 @@ after = document.querySelector('.after');
 play = document.querySelector('.play');
 pause = document.querySelector('.pause');
 
-after.addEventListener('click', movingRight);
-play.addEventListener('click', playSlider);
-pause.addEventListener('click', pauseSlider);
-before.addEventListener('click', movingLeft);
 positioning();
 
+// after.addEventListener('click', movingRight);
+// play.addEventListener('click', playSlider);
+// pause.addEventListener('click', pauseSlider);
+// before.addEventListener('click', movingLeft);
 
 function positioning() {
     position = imgs.length * (-600) + 1200; // this is start position, on the left side. for 6 pics it is -2400px.
