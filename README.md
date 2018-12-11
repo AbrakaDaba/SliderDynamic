@@ -1,2 +1,2 @@
 # SliderDynamic
-PhotoSlider -Dynamic(in progress)
+PhotoSlider -Dynamic(in progress - buttons still don't function)
